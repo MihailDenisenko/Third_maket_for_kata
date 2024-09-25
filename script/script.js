@@ -1,21 +1,17 @@
 
 
 
-window.addEventListener('resize', () => {
-  var wid = document.querySelector('.mySwiper').clientWidth
+window.addEventListener('DOMContentLoaded', () => {
+  var wid = document.querySelector('.body').clientWidth
   
  
-  if (wid > 320 && wid < 768) {
+  if (wid > 319 && wid < 768) {
     console.log(`Новые размеры: ${wid}`);
-    // swiper = ''
-  
-    var swiper = new Swiper(".mySwiper", {
+    const mySwiper = new Swiper(".mySwiper", {
 
-      slidesPerView: 'auto',
-      spaceBetween: 20,
-      
-      
-      
+      slidesPerView: 2.5,
+      spaceBetween: 40,
+      freeMode: true,
       
       pagination: {
         el: '.swiper-pagination',
@@ -24,16 +20,7 @@ window.addEventListener('resize', () => {
         clickable: true,
       },
 
-      // Navigation arrows
-      //   navigation: {
-      //   nextEl: '.swiper-button-next',
-      //   prevEl: '.swiper-button-prev',
-      // },
-
-      // And if we need scrollbar
-      // scrollbar: {
-      //   el: '.swiper-scrollbar',
-      // },
     });
+    
   }
-})
+});

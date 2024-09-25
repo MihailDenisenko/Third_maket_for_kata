@@ -9,15 +9,28 @@
 
 
 .body {
-    font-family: 'tt-medium';
+    /* font-family: 'tt-medium';
     min-width: 320px;
+    height: 150px;
+    /* width: 320px; */
+    /* margin: 0; */ 
 }
 
 .border {
     border: 1px solid #000;
 }
+.bor-dash {
+    border: dashed 1px red;
+}
+
+.main-section {
+    width: 80%;
+}
+
 
 .mySwiper {
+    width: 100%;
+    height: auto;
    
 }
 .content {
@@ -27,29 +40,47 @@
     /* margin-left: 0; */
 }
 .swiper-wrapper {
+    border: solid 1px rgb(206, 232, 11);
+    box-sizing:border-box;
     display: flex;
-    width: 50%;
+    width: 100%;
+    /* overflow: hidden; */
+    /* margin: 10px; */
+    margin-left: 0;
+    padding-left: 0;
 }
 .content__ul {
-    display: flex;}
+    margin: 10px;
+    width: 100%;
+    display: flex;    
+}
+
 .swiper-slide {
+    /* position: relative;
+    margin: 0; */
+    /* width: 60%; */
+
 }
 .cuntent__li {
     display: block;
-
+    margin-left: 10px;
     /* background-image: url("../img/menu_logo/dropdown.png"); */
     /* background-position: 50% 50%; */
     background-repeat: no-repeat;
-    right: 15px;
+    /* right: 15px; */
+}
+
+.cuntent__li:first-child {
+    margin-left: 0;
 }
 
 
-
 .content__button {
+    /* background-color: transparent; */
     position: relative;
     display: flex;
     align-items: center;
-    width: 240px;
+    width: 224px;
     height: 72px;
     /* background-repeat: no-repeat; */
 }
