@@ -14,7 +14,7 @@
 }
 
 .border {
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
 }
 
 .main-section {
@@ -25,7 +25,7 @@
     /* padding-left: 25px; */
     margin-left: 15px;
     margin-bottom: 25px;
-    width: 288px;
+    width: 100%;
     font-size: 16px;
 }
 .bor-dash {
@@ -42,9 +42,16 @@
 .content__ul {
 }
 .swiper-slide {
-    width: 80%;
-    margin-left: 20px;
+    border: dashed 1px red;
+    /* width: 80%; */
+    /* margin-left: 20px; */
 }
+.swiper-slide {
+    width: 80%;
+  }
+
+
+
 .cuntent__li {
 }
 .content__button {
@@ -69,4 +76,115 @@
 }
 .swiper-pagination {
     /* position: fixed; */
+}
+
+.more {
+    display: none;
+}
+@media screen and (width > 500px) {
+    .swiper {
+        height: auto;
+        display: flex;
+        align-items: center;margin-left: 15px;
+    }
+    .swiper-wrapper {
+        margin-left: auto;
+        display: flex;
+        
+        gap: 15px 0;
+        width: 100%;
+        height: 160px;
+        transition: all 2s;
+        flex-wrap: wrap;
+        overflow-y: hidden;
+    }
+@keyframes move-height-plus {
+    0% {
+        height: 160px;
+    }
+    100% {
+        height: 250px;
+    }
+}
+@keyframes move-height-minus {
+    0% {
+        height: 250px;
+    }
+    100% {
+        height: 160px;
+    }
+}
+    .wrapper-start {
+        animation-name: move-height-plus;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    .wrapper-end {
+        animation-name: move-height-minus;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+
+
+    
+    .swiper-slide{
+        display: block;
+        width: 240px;
+        height: 70px;
+    }    
+    .more {
+        display: block;
+        margin: 20px 15px;
+        display: flex;
+        width: 134px;
+        height: 100%;
+        position: relative;
+        transition: all 2s;
+    }
+
+    .more-all {
+        transition: all 2s;
+        grid-auto-rows: auto;
+    }
+
+    .more__img {
+        transition: all 2s;
+        font-family: 'tt-medium';
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        position: absolute;
+        left: 15px;
+    }
+
+    .more__span {
+        transition: all 2s;
+
+        position: absolute;
+        right: -15px;
+    }
+    @keyframes move {
+        66% {
+            transform: translateY(3px)
+        }
+     }
+
+    .more:hover {
+        transition: all 2s;
+
+        animation-name: move;
+        animation-duration: .3s;
+        animation-iteration-count: infinite;
+        cursor: pointer;        
+    }
+
+
+    
+    /* @keyframes move-class {
+        100% {
+            
+        }
+     } */
+
 }
