@@ -1,5 +1,6 @@
 var btn_more = document.querySelector('.more');
 var wrapper = document.querySelector('.swiper-wrapper');
+var el = document.querySelector('.hidden')
 
 
 
@@ -33,8 +34,11 @@ btn_more.addEventListener('click', () => {
   if (wrapper.classList.contains('wrapper-start') === false) {
     wrapper.classList.add('wrapper-start')
     wrapper.classList.remove('wrapper-end')
+    el.classList.remove('hidden')
+
   } else {
     wrapper.classList.add('wrapper-end')
+    wrapper.classList.add('hidden')
     wrapper.classList.remove('wrapper-start')
   }
 })
