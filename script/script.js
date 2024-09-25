@@ -7,16 +7,16 @@ window.addEventListener('DOMContentLoaded', () => {
  
   if (wid > 319 && wid < 768) {
     console.log(`Новые размеры: ${wid}`);
-    const mySwiper = new Swiper(".mySwiper", {
+    const mySwiper = new Swiper(".swiper", {
 
-      slidesPerView: 2.5,
-      spaceBetween: 40,
+      slidesPerView: "auto",
+      spaceBetween: 0,
       freeMode: true,
       
       pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
-        dynamicBullets: true,
+        // dynamicBullets: true,
         clickable: true,
       },
 
