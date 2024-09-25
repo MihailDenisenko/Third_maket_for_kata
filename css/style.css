@@ -94,22 +94,22 @@
         flex-wrap: wrap;
         overflow-y: hidden;
     }
-@keyframes move-height-plus {
-    0% {
-        height: 160px;
+    @keyframes move-height-plus {
+        0% {
+            height: 160px;
+        }
+        100% {
+            height: 250px;
+        }
     }
-    100% {
-        height: 250px;
+    @keyframes move-height-minus {
+        0% {
+            height: 250px;
+        }
+        100% {
+            height: 160px;
+        }
     }
-}
-@keyframes move-height-minus {
-    0% {
-        height: 250px;
-    }
-    100% {
-        height: 160px;
-    }
-}
     .wrapper-start {
         animation-name: move-height-plus;
         animation-duration: 1s;
@@ -146,8 +146,8 @@
         font-family: 'tt-medium';
         width: 20px;
         height: 20px;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
+        /* background-repeat: no-repeat;
+        background-position: 50% 50%; */
         position: absolute;
         left: 15px;
     }
@@ -159,7 +159,7 @@
         right: -15px;
     }
     @keyframes move {
-        66% {
+        100% {
             transform: translateY(3px)
         }
      }
@@ -170,5 +170,51 @@
         animation-duration: .3s;
         animation-iteration-count: infinite;
         cursor: pointer;        
+    }
+
+
+    @keyframes around-start {
+        0% { transform: rotate(0deg)
+        }
+        100% {
+            transform: rotate(180deg);
+        }
+    }
+    @keyframes around-end {
+        0% { transform: rotate(180deg)
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+        .more__img_around-start {
+            animation-name: around-start;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+    }
+        .more__img_around-end {
+        animation-name: around-end;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+}
+    @keyframes more__open {
+        100% {
+            transform: scale(0);
+        }
+    }
+    @keyframes more__close {
+        100% {
+            transform: scale(0);
+        }
+    }
+    .more__open-end {
+        animation-name: more__open;
+        animation-duration: 1s;
+    }
+    .more__close-end {
+        animation-name: more__open;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+
     }
 }

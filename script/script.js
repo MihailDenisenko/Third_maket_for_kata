@@ -1,7 +1,9 @@
 var btn_more = document.querySelector('.more');
 var wrapper = document.querySelector('.swiper-wrapper');
-var el = document.querySelector('.hidden')
-
+var el = document.querySelector('.hidden');
+var down = document.querySelector('.more__img');
+var open_ = document.querySelector('.more__open');
+var close_ = document.querySelector('.more__close')
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -32,11 +34,23 @@ btn_more.addEventListener('click', () => {
   // el[0].style = 'overflow-y: visible';
 
   if (wrapper.classList.contains('wrapper-start') === false) {
-    wrapper.classList.add('wrapper-start')
-    wrapper.classList.remove('wrapper-end')
-    el.classList.remove('hidden')
+    down.classList.add('more__img_around-start');
+    down.classList.remove('more__img_around-end');
+    open_.classList.add('more__open-end');
+    open_.classList.add('hidden')
+    wrapper.classList.add('wrapper-start');
+    wrapper.classList.remove('wrapper-end');
+    el.classList.remove('hidden');
+    
 
   } else {
+    down.classList.add('more__img_around-end')
+    down.classList.remove('more__img_around-start')
+
+
+
+    down.classList.remove('more__img_around')
+
     wrapper.classList.add('wrapper-end')
     wrapper.classList.add('hidden')
     wrapper.classList.remove('wrapper-start')
