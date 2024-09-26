@@ -17,6 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
       slidesPerView: "auto",
       freeMode: true,
       
+      
       pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
