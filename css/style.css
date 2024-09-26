@@ -17,41 +17,22 @@
     display: none;
 }
 
-.border {
-    /* border: 1px solid #000; */
-}
-
-.main-section {
-}
-
 .main-section__title {
     font-family: 'tt-medium';
-    /* padding-left: 25px; */
     margin-left: 15px;
     margin-bottom: 25px;
     width: 100%;
     font-size: 16px;
 }
-.bor-dash {
-}
+
+
 .swiper {
     width: 100%;
     height: 120px;
+    margin-left: auto ;
+    margin-right: auto;
 }
-.content {
-}
-.swiper-wrapper {
-}
-.content__ul {
-}
-.swiper-slide {
-}
-.swiper-slide {
-    width: 80%;
-  }
 
-  .cuntent__li {
-}
 .content__button {
     position: relative;
     width: 224px;
@@ -59,8 +40,7 @@
     display: flex;
     align-items: center;
 }
-.content__img {
-}
+
 .li__div {
     background-image: url('../img/menu_logo/dropdown.png');
     width: 40px;
@@ -71,29 +51,36 @@
     right: 10px;
     position: absolute;
 }
-.swiper-pagination {
-}
 
 .more {
     display: none;
 }
-@media screen and (width > 500px) {
+
+
+@media screen and (width > 768px) {
+
     .swiper {
         height: auto;
         display: flex;
-        align-items: center;margin-left: 15px;
+        align-items: center;
+        /* margin-left: ; */
+        /* justify-content: space-evenly; */
     }
+
     .swiper-wrapper {
-        margin-left: auto;
+        justify-self: center;
+        justify-content: start;
+        margin-left: 20px;
         display: flex;
-        
         gap: 15px 0;
         width: 100%;
         height: 160px;
         transition: all 2s;
         flex-wrap: wrap;
         overflow-y: hidden;
+        justify-items: start;
     }
+
     @keyframes move-height-plus {
         0% {
             height: 160px;
@@ -102,6 +89,7 @@
             height: 250px;
         }
     }
+
     @keyframes move-height-minus {
         0% {
             height: 250px;
@@ -110,11 +98,13 @@
             height: 160px;
         }
     }
+
     .wrapper-start {
         animation-name: move-height-plus;
         animation-duration: 1s;
         animation-fill-mode: forwards;
     }
+
     .wrapper-end {
         animation-name: move-height-minus;
         animation-duration: 2s;
@@ -125,7 +115,8 @@
         display: block;
         width: 240px;
         height: 70px;
-    }    
+    }  
+
     .more {
         display: block;
         margin: 20px 15px;
@@ -146,8 +137,6 @@
         font-family: 'tt-medium';
         width: 20px;
         height: 20px;
-        /* background-repeat: no-repeat;
-        background-position: 50% 50%; */
         position: absolute;
         left: 15px;
     }
@@ -171,7 +160,6 @@
         animation-iteration-count: infinite;
         cursor: pointer;        
     }
-
 
     @keyframes around-start {
         0% { transform: rotate(0deg)
@@ -198,23 +186,74 @@
         animation-fill-mode: forwards;
 }
     @keyframes more__open {
+        0% {
+            transform: scale(1);
+        }
         100% {
             transform: scale(0);
         }
     }
-    @keyframes more__close {
+
+    @keyframes more__open-start {
+        0% {
+            transform:  scale(0);
+        }
         100% {
-            transform: scale(0);
+            transform:  scale(1);
         }
     }
+    
     .more__open-end {
         animation-name: more__open;
         animation-duration: 1s;
+        animation-fill-mode: forwards;
     }
-    .more__close-end {
-        animation-name: more__open;
+    .more__open-start {
+        animation-name: more__open-start;
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes more__close-start {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            display: inline;
+            transform: scale(1);
+        }
+    }
+    @keyframes more__close-end {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            display: inline;
+            transform: scale(0);
+        }
+    }
+
+    .more__close-start {
+        transform: translateX(-15px);
+        animation-name: more__close-start;
         animation-duration: 1s;
         animation-fill-mode: forwards;
 
+    }
+
+    .more__close-end {
+        transform: translateX(-15px);
+        animation-name: more__close-end;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    
+    .more {
+        position: relative;
+    }
+
+    .more__span {
+        position: absolute;
+        left: 45px;
     }
 }
